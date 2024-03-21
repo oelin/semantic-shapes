@@ -29,5 +29,5 @@ sequence_shape = ss.SequenceShape(channels=256, length=1024)
 
 vector_shape = ss.VectorShape(dimension=256)
 
-matrix_shape = ss.MatrixShape(width=256, height=256)
+matrix_shape = ss.MatrixShape(height=256, width=256)
 ```

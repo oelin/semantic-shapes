@@ -27,7 +27,7 @@ text_shape = ss.TextShape(length=1024)
 
 sequence_shape = ss.SequenceShape(channels=256, length=1024)
 
-vector_shape = ss.VectorShape(length=256)
+vector_shape = ss.VectorShape(dimension=256)
 
 matrix_shape = ss.MatrixShape(width=256, height=256)
 ```

@@ -1,7 +1,7 @@
 name = "semantic-shapes"
 version = "0.1.0"
 description = ""
-authors = [""]
+authors = ["Semantic shapes for deep neural networks."]
 readme = "README.md"
 
 [tool.poetry.dependencies]

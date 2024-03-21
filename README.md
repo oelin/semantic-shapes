@@ -26,4 +26,6 @@ audio_shape = ss.AudioShape(duration=1024, channels=32)
 text_shape = ss.TextShape(length=1024)
 
 sequence_shape = ss.SequenceShape(channels=256, length=1024)
+
+embedding_shape = ss.EmbeddingShape(channels=256)
 ```

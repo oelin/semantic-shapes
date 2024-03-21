@@ -2,37 +2,36 @@
 
 Semantic shapes for deep neural networks.
 
-## Installation 
+Installation 
+------------
 
 ```sh
 pip install git+https://github.com/oelin/semantic-shapes
 ```
 
-## Usage
+Usage
+-----
+
+Shapes for typical modalities.
 
 ```python
 import semantic_shapes as ss
-import torch.nn as nn
 
+image_shape = ss.ImageShape(channels=3, width=256, height=256)
 
-class CNN(nn.Module):
-  def __init__(
-    self,
-    input_shape: ss.ImageShape,
-    factor_: ss.LayerShape,
-  ) -> None:
-    super().__init__()
+video_shape = ss.VideoShape(duration=1024, channels=3, width=256, height=256)
 
-    self.model = nn.Sequential(
-      nn.Conv2d(
-        in_channels=input_shape.channels,
-        out_channels=layer_shape.layers[0],
-      ),
-      nn.ReLU(),
-      nn.Conv2d(
-      )
-      nn.Conv2d(in_channels=32, out_channels=64, 3, 2, 1),
-      nn.ReLU(),
-      nn.Conv2d(in_channels=64, out_channels=256, 3, 2, 1),
-    )
+audio_shape = ss.AudioShape(duration=1024, channels=32)
+
+text_shape = ss.TextShape(length=1024)
+
+sequence_shape = ss.SequenceShape(length=1024, channels=256)
+```
+
+Custom shapes using `ss.partial`.
+
+```python
+RGBImageShape = ss.partial(ss.ImageShape, channels=3)
+
+LargeImageShape = ss.partial(ss.ImageShape, width=1024, height=1024)
 ```

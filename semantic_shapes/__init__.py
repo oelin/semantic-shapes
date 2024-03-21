@@ -46,5 +46,11 @@ class SequenceShape:
 
 
 @dataclass(frozen=True)
-class EmbeddingShape:
-    channels: Optional[int] = Unknown
+class VectorShape:
+    dimension: Optional[int] = Unknown
+
+
+@dataclass(frozen=True)
+class MatrixShape:
+    height: Optional[int] = Unknown
+    width: Optional[int] = Unknown

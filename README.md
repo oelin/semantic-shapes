@@ -1,6 +1,6 @@
 # semantic-shapes
 
-Semantic shapes for various modalities.
+Semantic shapes for deep neural networks.
 
 ## Installation 
 

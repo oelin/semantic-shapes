@@ -45,12 +45,6 @@ class SequenceShape:
     length: Optional[int] = Unknown
 
 
-# # Extras.
-
-# def compose(x: dataclass, y: dataclass) -> dataclass:
-
-#     fields = {**x.__dataclass_fields__, **y.__dataclass_fields__}
-#     fields = [(field.name, field.type) for field in fields]
-#     composite = dataclasses.make_dataclass('CompositeShape', fields)
-
-#     return composite
+@dataclass(frozen=True)
+class EmbeddingShape:
+    channels: Optional[int] = Unknown

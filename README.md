@@ -12,7 +12,7 @@ pip install git+https://github.com/oelin/semantic-shapes
 Usage
 -----
 
-Shapes for typical modalities.
+Use default shapes.
 
 ```python
 import semantic_shapes as ss
@@ -28,10 +28,14 @@ text_shape = ss.TextShape(length=1024)
 sequence_shape = ss.SequenceShape(length=1024, channels=256)
 ```
 
-Custom shapes using `ss.partial`.
+Define custom shapes using `ss.partial` and `ss.compose`.
 
 ```python
 RGBImageShape = ss.partial(ss.ImageShape, channels=3)
 
 LargeImageShape = ss.partial(ss.ImageShape, width=1024, height=1024)
+
+VolumeVideoShape = ss.compose(ss.Volume, ss.VideoShape)
+
+volume_video_shape = VolumeVideoShape(duration=1024, channels=3, width=256, height=256, depth=256)
 ```

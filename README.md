@@ -17,7 +17,7 @@ import semantic_shapes as ss
 
 image_shape = ss.ImageShape(channels=3, height=256, width=256)
 
-volume_shape = ss.ImageShape(channels=3, depth=256, height=256, width=256)
+volume_shape = ss.VolumeShape(channels=3, depth=256, height=256, width=256)
 
 video_shape = ss.VideoShape(duration=1024, channels=3, height=256, width=256)
 
